@@ -1,0 +1,36 @@
+.navbar {
+    padding: 19px 0;
+    background: var(--secondary-background);
+    box-shadow: 0 .3px .9px #ffffff1a, 0 1.6px 3.6px #ffffff1a;
+}
+
+.navbar .navbar-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.navbar .navbar-container .app-title {
+    font-weight: 600;
+    font-size: 18px;
+    color: aliceblue;
+}
+
+.navbar .navbar-links {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    list-style-type: none;
+    margin-right: 10px;
+}
+
+.navbar .navbar-links li {
+    cursor: pointer;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.navbar .navbar-links li:hover {
+    opacity: 0.6;
+}

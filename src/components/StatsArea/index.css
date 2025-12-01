@@ -1,0 +1,36 @@
+.statsarea-container {
+    max-width: 850px;
+    width: 100%;
+    margin: 24px auto;
+    padding: 10px 16px;
+}
+
+.statsarea-container .statsarea-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 18px;
+    background: var(--secondary-background);
+    color: var(--primary-text);
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.stat .label {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.stat .value {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 4px;
+}

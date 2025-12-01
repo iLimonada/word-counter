@@ -1,0 +1,30 @@
+.footer {
+    padding: 19px 0;
+    background: var(--secondary-background);
+    box-shadow: 0 .3px .9px #ffffff1a, 0 1.6px 3.6px #ffffff1a;
+    margin-top: auto; 
+}
+
+.footer .footer-container {
+    margin: 0 auto;          
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 16px;
+}
+
+.footer .footer-container span {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.footer .footer-container a {
+    text-decoration: none;
+    color: var(--primary-text);
+    opacity: 0.8;
+    transition: opacity 0.2s ease;
+}
+
+.footer .footer-container a:hover {
+    opacity: 1;
+}
