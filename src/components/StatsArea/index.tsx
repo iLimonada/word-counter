@@ -9,36 +9,29 @@ interface StatsAreaProps {
   text: string;
 }
 
+interface StatsInfo {
+    label: string;
+    value: number;
+}
+
 const StatsArea = ({ text }: StatsAreaProps) => {
+    const stats:  StatsInfo[] = [
+        { label: "Palavras", value: countWords(text) },
+        { label: "Caracteres", value: countCharacters(text) },
+        { label: "Sentenças", value: countSentences(text) },
+        { label: "Parágrafos", value: countParagraphs(text) },
+        { label: "Pronomes", value: countPronouns(text) }
+    ]
+
   return (
     <div className="statsarea-container">
       <div className="statsarea-info">
-
-        <div className="stat">
-          <span className="label">Palavras</span>
-          <span className="value">{countWords(text)}</span>
-        </div>
-
-        <div className="stat">
-          <span className="label">Caracteres</span>
-          <span className="value">{countCharacters(text)}</span>
-        </div>
-
-        <div className="stat">
-          <span className="label">Sentenças</span>
-          <span className="value">{countSentences(text)}</span>
-        </div>
-
-        <div className="stat">
-          <span className="label">Parágrafos</span>
-          <span className="value">{countParagraphs(text)}</span>
-        </div>
-
-        <div className="stat">
-          <span className="label">Pronomes</span>
-          <span className="value">{countPronouns(text)}</span>
-        </div>
-
+        {stats.map((stat) => (
+            <div className="stat" key={stat.label}>
+                <span className="label">{stat.label}</span>
+                <span className="value">{stat.value}</span>
+            </div>
+        ))}
       </div>
     </div>
   );
